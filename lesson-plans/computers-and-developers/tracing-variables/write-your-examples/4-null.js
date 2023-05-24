@@ -1,8 +1,14 @@
 'use strict';
 
-/* Null
+/* Null with If Condition */
 
-TODO: create a few variables(null):
-- you need to add comments to show where the variable been
-declared, initialized, read , reassigned,...
-*/
+let temperature = null;
+let message = 'Temperature is'
+// Check if temperature is null
+if (temperature === null) {
+  // assign the variable with this value 'Temperature is '+ temperature
+  message='Temperature is '+ temperature
+  console.log( message);
+} else {
+console.log(message);
+}
