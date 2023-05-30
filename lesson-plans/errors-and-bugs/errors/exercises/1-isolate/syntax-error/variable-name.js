@@ -10,7 +10,7 @@ console.log('--- in execution phase ---');
   environment:
 
   name:
-  message:
+  message: Cannot read properties of undefined (reading 'exists')
 
   location:
 
@@ -22,6 +22,7 @@ console.log('--- in execution phase ---');
 */
 
 
-const 3 = 'three';
+const three = 3;
+console.log(three);
 
 

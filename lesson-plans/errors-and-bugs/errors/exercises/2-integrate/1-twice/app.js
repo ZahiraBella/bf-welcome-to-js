@@ -9,7 +9,7 @@ import {
   environment:
 
   name:
-  message:
+  message:Uncaught TypeError: Cannot read properties of undefined (reading 'exists')
 
   location:
 
@@ -29,9 +29,10 @@ whenFormDataChanges('user-data', () => {
 
   // --- repeat the text ---
 
-  let repeated + text + '\n' + text;
+  let repeated = text + '\n' + text;
 
   // --- display the repeated text ---
 
   displayString('doubled-input', repeated);
+
 });
