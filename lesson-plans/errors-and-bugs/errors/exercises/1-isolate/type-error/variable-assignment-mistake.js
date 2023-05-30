@@ -9,7 +9,7 @@ console.log('--- in execution phase ---');
   environment:
 
   name:
-  message:
+  message:Cannot read properties of undefined (reading 'exists')
 
   location:
 
@@ -22,6 +22,8 @@ console.log('--- in execution phase ---');
 
 let isHappy = false;
 
-true = isHappy;
+isHappy = true;
+
+console.log(isHappy);
 
 

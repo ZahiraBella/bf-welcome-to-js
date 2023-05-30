@@ -16,9 +16,9 @@
 
 let input = prompt('enter something 5 characters long');
 
-if ((input = null)) {
+if (!input) {
   alert(':(');
-} else if (input.length < 5) {
+} else if (input.length < 5 ) {
   alert('too short');
 } else if (input.length > 5) {
   alert('too long');
