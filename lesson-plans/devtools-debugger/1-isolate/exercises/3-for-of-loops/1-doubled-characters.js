@@ -5,10 +5,16 @@ while (text === null) {
   text = prompt('enter some text, each character will be doubled:');
 }
 
-let doubled = '';
-for (let nextChar of text) {
-  doubled = doubled + nextChar + nextChar;
-}
+let doubled = text.split('').join('-');
+
+// let hyphen='';
+
+// for (let nextChar of text) {
+//   doubled = doubled + hyphen+nextChar;
+//   hyphen='-';
+//   console.log(doubled);
+// }
+
 
 alert(doubled);
 

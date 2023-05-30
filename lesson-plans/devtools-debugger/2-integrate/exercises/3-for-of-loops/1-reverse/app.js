@@ -6,16 +6,16 @@ import {
 } from '../../../../../../lib/dom-io/index.js';
 
 whenFormDataChanges('reversify', () => {
-  debugger;
+
 
   console.log('--- form data changed ---');
 
   // --- read user input ---
 
   let text = readString('to-reverse');
-  let screaming = readBoolean('loud');
+  //let screaming = readBoolean('loud');
 
-  console.log(text, screaming);
+ // console.log(text, screaming);
 
   // --- reverse the string input ---
 
@@ -23,25 +23,48 @@ whenFormDataChanges('reversify', () => {
   for (let character of text) {
     reversed = character + reversed;
   }
-
-  console.log(reversed);
-
-  // --- set to upper or lower case ---
-
-  let finalText = '';
-  if (screaming) {
+   console.log('reversed.length'+reversed.length);
+   let finalText = '';
+   if ( text .length > 5) {
+   console.log('>5')
     finalText = reversed.toUpperCase();
-  } else {
+ } 
+
+    else if ( text.length < 5 ) 
+  {
+     console.log(' < 5')
     finalText = reversed.toLowerCase();
   }
 
-  console.log(finalText);
+else {
+   console.log('normal')
+  finalText = reversed ;
+}
 
-  // --- display the final text ---
+ displayString('out', finalText);
+   console.log(finalText);
 
-  // display the final text to the <pre> with id "out"
-  displayString('out', finalText);
 });
+
+
+
+//   let finalText = '';
+//  console.log('upper'+reversed.length)
+//   if ( reversed.length > 5) {
+//     console.log('>5')
+//     finalText = reversed.toUpperCase();
+//   } 
+//   else if (reversed.lengt < 5 ) 
+//   {
+//      console.log('<5')
+//     finalText = reversed.toLowerCase();
+//   }
+
+// else{
+//    console.log('normal')
+//   finalText = reversed;
+// }
+//   console.log(finalText);
 
 /*  ===== Challenges =====
 
@@ -52,3 +75,43 @@ whenFormDataChanges('reversify', () => {
   - make sure each character appears only once in the reversed text
 
 */
+
+
+// // --- read user input ---
+
+//   let text = readString('to-reverse');
+//   let screaming = readBoolean('loud');
+
+//   console.log(text, screaming);
+
+//   // --- reverse the string input and ensure unique characters ---
+
+//   let reversed = '';
+//   let uniqueCharacters = new Set();
+//   for (let i = text.length - 1; i >= 0; i--) {
+//     if (!uniqueCharacters.has(text[i])) {
+//       reversed += text[i];
+//       uniqueCharacters.add(text[i]);
+//     }
+//   }
+
+//   console.log(reversed);
+
+//   // --- set to upper or lower case based
+
+// let finalText = '';
+//   if (text.length > 10) {
+//     finalText = reversed.toUpperCase();
+//   } else if (text.length < 5) {
+//     finalText = reversed.toLowerCase();
+//   } else {
+//     finalText = reversed;
+//   }
+
+//   console.log(finalText);
+
+//   // --- display the final text ---
+
+//   // display the final text to the <pre> with id "out"
+//   displayString('out', finalText);
+// });

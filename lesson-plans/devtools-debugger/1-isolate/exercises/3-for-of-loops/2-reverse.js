@@ -8,9 +8,18 @@ while (toReverse === null) {
 let backwards = '';
 for (let nextChar of toReverse) {
   backwards = nextChar + backwards;
+
+  console.log('reverse',backwards);
 }
 
-let transformation = toReverse + ' -> ' + backwards;
+let words = '';
+for (let nextChar of backwards) {
+  words = nextChar + words;
+}
+
+console.log('wards',words);
+
+let transformation = toReverse + ' -> ' + backwards + ' -> ' + words ;
 
 alert(transformation);
 
