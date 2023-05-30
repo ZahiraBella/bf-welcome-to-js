@@ -1,15 +1,23 @@
+
 'use strict';
 
-let input = prompt('enter your name:');
+let firstname = prompt('Please enter your firstname');
+let lastname = prompt('Please enter your lastname');
 
-let greeting = '';
-if (input === null) {
-  greeting = 'hello anonymous.';
-} else {
-  greeting = 'hello ' + input + '!';
+let message = '';
+
+if(firstname && lastname){
+message='hello ' + firstname+ ' ' +lastname +'!';
+
 }
+else{
+  message='you didn\'t enter your firstname or lastname';
 
-alert(greeting);
+}
+alert(message);
+
+
+
 
 /*  ===== Challenges =====
   - Ask the user for their first and last names.

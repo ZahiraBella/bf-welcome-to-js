@@ -14,8 +14,10 @@
 */
 
 /* --- gather user input --- */
+//declare the variable and init with the a null value 
 
 let input = null;
+console.log('input type',typeof(input));
 while (true) {
   input = prompt('enter something with 5 characters and it will be reversed.');
   console.log(input);
@@ -32,8 +34,11 @@ while (true) {
 /* --- create the final message --- */
 
 let message = '';
+
 for (let character of input) {
+  console.log(character);
   message = character + message;
+  console.log(message);
 }
 console.log(message);
 
